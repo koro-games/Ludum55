@@ -18,11 +18,11 @@ MonoBehaviour:
     value: 1
   spectralLut:
     overrideState: 0
-    value: {fileID: 0}
+    value: {fileID: 2800000, guid: a5e897f9f29eb488ba4791cd52d004b5, type: 3}
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.272
+    value: 0.081
   fastMode:
     overrideState: 1
     value: 1
@@ -47,10 +47,10 @@ MonoBehaviour:
     value: 30
   intensityX:
     overrideState: 1
-    value: 1
+    value: 0.686
   intensityY:
     overrideState: 1
-    value: 0.724
+    value: 0.838
   centerX:
     overrideState: 1
     value: 0

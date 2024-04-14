@@ -88,6 +88,7 @@ public class DiceBehaviour : MonoBehaviour
         result = sides[upper].value;
         text.text = "$" + sides[upper].value;
         DiceManager.diceManager.CheckResult(result);
+        diceui.AddReward(result);
     }
     IEnumerator ToKinematic()
     {

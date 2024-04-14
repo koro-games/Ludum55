@@ -11,10 +11,11 @@ public class SummCalc : MonoBehaviour
     int maxvalue = 6;
     public int iterations = 100;
     UISystem uiSystem;
-
+    RoundSystem roundSystem;
     void Start()
     {
         uiSystem=FindObjectOfType<UISystem>();
+        roundSystem= FindObjectOfType<RoundSystem>();
         ResetDices();
     }
 
@@ -27,8 +28,10 @@ public class SummCalc : MonoBehaviour
     }
     public void CheckCombinations(List<Vector2Int> results)
     {
-        foreach (Combination comb in Combinations.combination)
+        for (int combN=Combinations.combination.Length-1;combN>=0;combN--)
+        //foreach (Combination comb in Combinations.combination)
         {
+            Combination comb = Combinations.combination[combN];
             int correct = 0;
             List<int> used = new List<int>();
             List<int> selected = new List<int>();
@@ -81,11 +84,13 @@ public class SummCalc : MonoBehaviour
             if (correct >= comb.sequence.Length)
             {
                 string txt = comb.name + " ";
+                int result = comb.score;
                 foreach (int sl in selected)
                 {
-                    txt += sl;
+                    result += sl;
                 }
-                Debug.Log(txt);
+                uiSystem.SpawnComboText(comb.name, "+$" + result, (combN+1f)/ Combinations.combination.Length);
+                roundSystem.RollResult(result);
             }
             /*//debug
             if (correct >= comb.sequence.Length)

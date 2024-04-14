@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,11 +8,20 @@ public class DiceUI : MonoBehaviour
 {
     public DiceBehaviour dice;
     public UISystem uiSystem;
+    public TMP_Text reward; 
     void Start()
     {
         
     }
-
+    public void AddReward(int value)
+    {
+        if (value > 0)
+        {
+            reward.text = "+$" + value;
+        }
+        else reward.text = "-$" + value;
+        GetComponent<Animation>().Play();
+    }
     // Update is called once per frame
     void Update()
     {
