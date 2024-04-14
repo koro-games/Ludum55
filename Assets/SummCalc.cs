@@ -31,6 +31,8 @@ public class SummCalc : MonoBehaviour
         {
             int correct = 0;
             List<int> used = new List<int>();
+            List<int> selected = new List<int>();
+            
 
             foreach (Vector2Int sq in comb.sequence)
             {
@@ -44,6 +46,7 @@ public class SummCalc : MonoBehaviour
                             
                             correct++;
                             used.Add(results[r].x);
+                            for (int c = 0;c< sq.y; c++) selected.Add(results[r].x);
                             break;
                         }
                     }
@@ -75,7 +78,15 @@ public class SummCalc : MonoBehaviour
                     }
                 }
             }
-
+            if (correct >= comb.sequence.Length)
+            {
+                string txt = comb.name + " ";
+                foreach (int sl in selected)
+                {
+                    txt += sl;
+                }
+                Debug.Log(txt);
+            }
             /*//debug
             if (correct >= comb.sequence.Length)
             {
@@ -90,7 +101,7 @@ public class SummCalc : MonoBehaviour
                 Debug.Log(txt + ") rew.$" + comb.score);
             }
             */
-        //debug
+                //debug
         }
 
     }

@@ -4,25 +4,29 @@ using UnityEngine;
 
 public class UISystem : MonoBehaviour
 {
-    public List<DiceUI> diceUI;
-    void Start()
+    public static UISystem UI;
+    public RectTransform rect;
+    [SerializeField] 
+    Transform diceUIs;
+    [SerializeField] 
+    DiceUI diceUIprefab;
+    public List<DiceUI> diceUIList=new List<DiceUI>();
+    void Awake()
     {
-        
+        UI= this;
+        rect = GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
+    public void AddDice(DiceBehaviour newDice)
+    {
+        DiceUI newDiceUI = Instantiate(diceUIprefab, diceUIs);
+        newDiceUI.dice = newDice;
+        newDiceUI.uiSystem = this;
+        diceUIList.Add(newDiceUI);
+    }
     void Update()
     {
-        foreach(DiceUI dice in diceUI)
-        {
-            Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
-            dice.rect.transform.position = Camera.main.WorldToScreenPoint(dice.dice.transform.position);
-        }
+
     }
 }
 
-public class DiceUI
-{
-    public DiceBehaviour dice;
-    public GameObject rect;
-}

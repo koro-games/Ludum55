@@ -1,10 +1,3 @@
-// Toony Colors Free
-// (c) 2012,2016 Jean Moreno
-
-
-// Want more features ? Check out Toony Colors Pro+Mobile 2 !
-// http://www.jeanmoreno.com/toonycolorspro/
-
 
 Shader "Toony Colors Free/Regular"
 {

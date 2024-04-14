@@ -63,7 +63,7 @@ namespace BrewedInk.CRT
 
 		[Tooltip("Controls how round the edge of the screen is")]
 		[Range(0,1f)]
-		[HideInInspector]
+		//[HideInInspector]
 		public float monitorRoundness = .2f; // TODO: can't figure this out
 
 		[Tooltip("A detail texture for the monitor")]

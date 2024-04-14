@@ -32,24 +32,13 @@ public class TCF_MaterialInspector : MaterialEditor
 		GUILayout.Space(4);
 		SeparatorLine();
 
-		GUILayout.Label("Want more features?", EditorStyles.boldLabel);
 		Rect r = GUILayoutUtility.GetRect(new GUIContent("Outlines, bump, specular, transparency, sketch effect, reflection probes, mobile versions..."), EditorStyles.wordWrappedMiniLabel);
 		r.y -= 6;
-		GUI.Label(r, "Outlines, bump, specular, transparency, sketch effect, reflection probes, mobile versions...", EditorStyles.wordWrappedMiniLabel);
 		string color = EditorGUIUtility.isProSkin ? "#27abff" : "#0040dd";
-		GUILayout.Label(string.Format("Check out <b><color={0}>Toony Colors Pro+Mobile 2</color></b> and give your game the <i>ultimate stylized look</i>!", color), RichTextLabel);
 
 		GUILayout.Space(4);
 		EditorGUILayout.BeginHorizontal();
 
-		if(GUILayout.Button("View Web Demo", EditorStyles.miniButtonLeft))
-		{
-			Application.OpenURL(@"http://www.jeanmoreno.com/toonycolorspro/?ref=tcf");
-		}
-		if(GUILayout.Button("View on Asset Store", EditorStyles.miniButtonRight))
-		{
-			Application.OpenURL("com.unity3d.kharma:content/8105");
-		}
 
 		EditorGUILayout.EndHorizontal();
 		GUILayout.Space(4);

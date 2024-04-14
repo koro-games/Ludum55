@@ -20,15 +20,16 @@ public class DiceManager : MonoBehaviour
         diceManager = this;
         uiSystem=FindObjectOfType<UISystem>();
         t = waitTime;
-        GameObject[] godices = GameObject.FindGameObjectsWithTag("Cube");
+        DiceBehaviour[] godices = FindObjectsOfType<DiceBehaviour>();
 
-        foreach (GameObject godice in godices)
+        foreach (DiceBehaviour godice in godices)
         {
             dices.Add(godice.GetComponent<DiceBehaviour>());
         }
     }
     public void Throw()
     {
+        results.Clear();
         foreach (DiceBehaviour dice in dices)
         {
             dice.GetComponent<DiceBehaviour>().ResetCube();
@@ -42,19 +43,11 @@ public class DiceManager : MonoBehaviour
         results.Add(r);
         if (t < waitTime)
         {
-            int c=0;
-            for (int i = 0; i < dices.Count;i++)
-            {
-                if (!dices[i].stat) 
-                {
-                    c++;
-                }
-                else break;
-            }
-            if (c == dices.Count) 
+            if (results.Count == dices.Count) 
             {
                 SendResult();
             }
+            Debug.Log(results.Count +" " +dices.Count);
         } 
     }
     public void SendResult()
