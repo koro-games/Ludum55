@@ -32,7 +32,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 9064792826506443446}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 67.18}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 48.260826}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 56.73442}
@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 9064792826506443447}
   - component: {fileID: 5437784257285287557}
   - component: {fileID: 7923507746991209576}
+  - component: {fileID: 7640326173193441453}
   m_Layer: 5
   m_Name: DiceUI
   m_TagString: Untagged
@@ -322,3 +323,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &7640326173193441453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9064792826506443441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ab1b00212a1a544bdf4d71bbdac361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: e3c8b84abdb59ac4989e1d6417627b78, type: 3}
+  kd: 0.3

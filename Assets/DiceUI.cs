@@ -19,7 +19,7 @@ public class DiceUI : MonoBehaviour
         {
             reward.text = "+$" + value;
         }
-        else reward.text = "-$" + value;
+        else reward.text = "-$" + Mathf.Abs(value);
         GetComponent<Animation>().Play();
     }
     // Update is called once per frame

@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &357363177781553713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5120283449885655052}
+  - component: {fileID: 8880512814229044974}
+  m_Layer: 0
+  m_Name: DiceHits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5120283449885655052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357363177781553713}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8555471367856122440}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8880512814229044974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357363177781553713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ab1b00212a1a544bdf4d71bbdac361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 3c8b265100d72bb4c957d7b6eb15c039, type: 3}
+  - {fileID: 8300000, guid: 275e99a8c9a6dbf4899b0eb33eb4aada, type: 3}
+  - {fileID: 8300000, guid: 0ce3e0bc42f88f9448e13a1ec9b35159, type: 3}
+  kd: 0.3
 --- !u!1 &1833252315333908528
 GameObject:
   m_ObjectHideFlags: 0
@@ -5075,6 +5124,56 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &3739865203877245574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901069541834094793}
+  - component: {fileID: 6939296722558418263}
+  m_Layer: 0
+  m_Name: FloorHits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901069541834094793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739865203877245574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8555471367856122440}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6939296722558418263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3739865203877245574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ab1b00212a1a544bdf4d71bbdac361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 009c40c9f400b014db3bafd6975c990b, type: 3}
+  - {fileID: 8300000, guid: 9aec5a30b337ee046bb7d783270fef55, type: 3}
+  - {fileID: 8300000, guid: 5a8913229452ecb4894e2c5783614555, type: 3}
+  - {fileID: 8300000, guid: bfbb96a1e3e3cb746b02489668e015c6, type: 3}
+  kd: 0.3
 --- !u!1 &5700109766907316184
 GameObject:
   m_ObjectHideFlags: 0
@@ -6187,6 +6286,54 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 5104908366993361660}
   m_maskType: 0
+--- !u!1 &9018812902554883160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4581969839027352213}
+  - component: {fileID: 7335659461567785759}
+  m_Layer: 0
+  m_Name: Nail audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4581969839027352213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018812902554883160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8555471367856122440}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: -4.54537, y: 0, z: 0}
+--- !u!114 &7335659461567785759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9018812902554883160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ab1b00212a1a544bdf4d71bbdac361, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 30c34a3d967024c4ba3436e28f79d97e, type: 3}
+  - {fileID: 8300000, guid: 6eab097112d2bc44689287122e2364b3, type: 3}
+  kd: 0.1
 --- !u!1 &9075020764639834354
 GameObject:
   m_ObjectHideFlags: 0
@@ -6200,7 +6347,7 @@ GameObject:
   - component: {fileID: 9075020764639834357}
   - component: {fileID: 6576920784671018324}
   m_Layer: 0
-  m_Name: DfltDice
+  m_Name: _Dice
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6221,6 +6368,9 @@ Transform:
   - {fileID: 2435795089998438593}
   - {fileID: 6562788243716697988}
   - {fileID: 6920986454679424451}
+  - {fileID: 5120283449885655052}
+  - {fileID: 901069541834094793}
+  - {fileID: 4581969839027352213}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6265,6 +6415,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 124809e9a30fa90469f7562caec375a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6576920784671018324}
+        m_TargetAssemblyTypeName: DiceBehaviour, Assembly-CSharp
+        m_MethodName: StartEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnRoll:
+    m_PersistentCalls:
+      m_Calls: []
+  trick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6576920784671018324}
+        m_TargetAssemblyTypeName: DiceBehaviour, Assembly-CSharp
+        m_MethodName: GetHighest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6576920784671018324}
+        m_TargetAssemblyTypeName: DiceBehaviour, Assembly-CSharp
+        m_MethodName: SendResult
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  visual: {fileID: 2189129116516468681}
   hitforce: 250
   text: {fileID: 5930859540392197812}
   sides:
@@ -6276,8 +6472,13 @@ MonoBehaviour:
   - {fileID: 4881637330000481701}
   result: 0
   stat: 0
+  pinnable: 1
+  triggerlast: 0
   diceui: {fileID: 0}
   Nail: {fileID: 3237456809349337739}
+  heavy: {fileID: 6939296722558418263}
+  light: {fileID: 8880512814229044974}
+  nailaudio: {fileID: 7335659461567785759}
 --- !u!1001 &1423588588980559595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6331,15 +6532,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 175f8eba559877341be4247afd806ae1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 6.776
+      value: -17.656141
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 175f8eba559877341be4247afd806ae1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.22
+      value: 107.36369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 175f8eba559877341be4247afd806ae1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 8.976
+      value: -165.42459
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 175f8eba559877341be4247afd806ae1, type: 3}
       propertyPath: m_ConstrainProportionsScale

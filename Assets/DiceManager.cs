@@ -6,7 +6,8 @@ using UnityEngine;
 public class DiceManager : MonoBehaviour
 {
     public List<DiceBehaviour> dices = new List<DiceBehaviour>();
-    List<int> results = new List<int>();
+    public List<DiceBehaviour> lastdices = new List<DiceBehaviour>();
+    public List<int> results = new List<int>();
 
     public SummCalc summCalc;
     public static DiceManager diceManager;
@@ -29,6 +30,7 @@ public class DiceManager : MonoBehaviour
     }
     public void Throw()
     {
+        lastdices.Clear();
         results.Clear();
         foreach (DiceBehaviour dice in dices)
         {
@@ -41,19 +43,26 @@ public class DiceManager : MonoBehaviour
     public void CheckResult(int r)
     {
         results.Add(r);
-        if (t < waitTime)
+        if (t < waitTime&& waitforresult)
         {
             if (results.Count == dices.Count) 
             {
-                SendResult();
+                preSendResult();
             }
             Debug.Log(results.Count +" " +dices.Count);
         } 
     }
-    public void SendResult()
+    public void preSendResult()
     {
         waitforresult = false;
-
+        foreach (DiceBehaviour lastdice in lastdices)
+        {
+            lastdice.trick.Invoke();
+        }
+        SendResult();
+    }
+    public void SendResult()
+    {
 
         Dictionary<int, int> valueCount = new Dictionary<int, int>();
 
@@ -86,8 +95,8 @@ public class DiceManager : MonoBehaviour
         {
             t += Time.deltaTime;
             if (t >= waitTime) 
-            { 
-                SendResult(); 
+            {
+                preSendResult();
             }
         }
         

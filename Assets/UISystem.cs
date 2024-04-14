@@ -34,6 +34,7 @@ public class UISystem : MonoBehaviour
     }
     public void UpdateScoreValues()
     {
+        
         if (roundText.value != roundSystem.cRound) roundText.ChangeValue(roundSystem.cRound);
         if (quotaText.value != roundSystem.quota) quotaText.ChangeValue(roundSystem.quota);
         if (deadlineText.value != roundSystem.deadline) deadlineText.ChangeValue(roundSystem.deadline);
