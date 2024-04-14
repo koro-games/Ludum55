@@ -10,10 +10,10 @@ PrefabInstance:
     - target: {fileID: 7328735217471420637, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e0e9c3c6cb31f8e428b78d7f1868edb6, type: 3}
+      objectReference: {fileID: 21300000, guid: b3d48ffa9613fb4449061317e4a2a469, type: 3}
     - target: {fileID: 7328735217717775552, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: m_Name
-      value: Purchase Devil
+      value: Purchase Pines
       objectReference: {fileID: 0}
     - target: {fileID: 7328735217717775553, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: m_Pivot.x
@@ -101,11 +101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7328735217717775580, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: cost
-      value: 5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7328735217717775580, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: objtoSpawn
       value: 
-      objectReference: {fileID: 2113663999228526327, guid: 35b947a224bed7243883eaa54f5c1fa4, type: 3}
+      objectReference: {fileID: 2113663999228526327, guid: bc15dacb7330b234da70eb91f759cf0b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}

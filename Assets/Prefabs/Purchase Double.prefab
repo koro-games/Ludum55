@@ -100,6 +100,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7328735217717775580, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
+      propertyPath: cost
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328735217717775580, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: objtoSpawn
       value: 
       objectReference: {fileID: 2113663999228526327, guid: dd11b7ecda0928145bb2821357648cc5, type: 3}

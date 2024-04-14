@@ -26,6 +26,7 @@ public class DiceBehaviour : MonoBehaviour
     public AudioPlayer heavy;
     public AudioPlayer light;
     public AudioPlayer nailaudio;
+    PinSystem pinSystem;
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "Cube")
@@ -38,7 +39,8 @@ public class DiceBehaviour : MonoBehaviour
 
     void Start()
     {
-        rb= GetComponent<Rigidbody>();
+        pinSystem=FindObjectOfType<PinSystem>();
+        rb = GetComponent<Rigidbody>();
         OnSpawn.Invoke();
         rb.velocity=Vector3.up* 20;
         rb.AddTorque(Random.insideUnitCircle * 100);
@@ -46,6 +48,7 @@ public class DiceBehaviour : MonoBehaviour
     public void StartEvent()
     {
         UISystem.UI.AddDice(this);
+        DiceManager.diceManager.dices.Add(this);
     }
 
     public void ResetCube()
@@ -84,8 +87,9 @@ public class DiceBehaviour : MonoBehaviour
 
     public void PinDice()
     {
-        if (pinnable)
+        if (pinnable&& pinSystem.pinscount>0)
         {
+            pinSystem.UsePin(true);
             Nail.transform.rotation = Quaternion.identity;
             Nail.gameObject.SetActive(true);
             Nail.Stop();
@@ -98,6 +102,7 @@ public class DiceBehaviour : MonoBehaviour
 
     IEnumerator UnPinDice()
     {
+        pinSystem.UsePin(false);
         Nail.Stop();
         Nail.Play("UnNail");
         Nail.transform.rotation = Quaternion.identity;

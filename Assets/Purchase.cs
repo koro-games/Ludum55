@@ -11,6 +11,7 @@ public class Purchase : MonoBehaviour
     SpawnDice spawn;
     private void Start()
     {
+        cost = (int)Mathf.Clamp(1f / cost * RoundSystem.instance.quota,10,100);
         costtext.text = "$" + cost;
         spawn = FindObjectOfType<SpawnDice>();
     }
@@ -20,6 +21,7 @@ public class Purchase : MonoBehaviour
         if (rs.score > cost && !spawn.hole.activeSelf)
         {
             rs.score -= cost;
+            UISystem.UI.UpdateScoreValues();
             spawn.Spawn(objtoSpawn);
             ShopSystem.instance.intheshop.Remove(this);
             Destroy(gameObject);

@@ -35,6 +35,10 @@ public class RoundSystem : MonoBehaviour
     {
         instance = this;
     }
+    private void Start()
+    {
+        ShopSystem.instance.AddItem(2);
+    }
     public void Reroll()
     {
         deadline--;

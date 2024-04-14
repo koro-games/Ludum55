@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 1552959867dec0a468a089b9308d09ca, type: 3}
     - target: {fileID: 7328735217717775552, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: m_Name
-      value: Purchase Devil 1
+      value: Purchase Glitch
       objectReference: {fileID: 0}
     - target: {fileID: 7328735217717775553, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: m_Pivot.x
@@ -98,6 +98,10 @@ PrefabInstance:
     - target: {fileID: 7328735217717775553, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7328735217717775580, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
+      propertyPath: cost
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7328735217717775580, guid: ec1c5531b701faf42851fed83b7a7fad, type: 3}
       propertyPath: objtoSpawn

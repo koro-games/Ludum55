@@ -21,12 +21,12 @@ public class DiceManager : MonoBehaviour
         diceManager = this;
         uiSystem=FindObjectOfType<UISystem>();
         t = waitTime;
-        DiceBehaviour[] godices = FindObjectsOfType<DiceBehaviour>();
+        /*DiceBehaviour[] godices = FindObjectsOfType<DiceBehaviour>();
 
         foreach (DiceBehaviour godice in godices)
         {
             dices.Add(godice.GetComponent<DiceBehaviour>());
-        }
+        }*/
     }
     public void Throw()
     {
