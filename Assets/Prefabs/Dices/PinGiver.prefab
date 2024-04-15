@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e06217d11c6e06846b2f127798186f79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentDice: {fileID: 0}
+  parentDice: {fileID: 4314492299655086929}
 --- !u!1001 &6964198316849139205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54,7 +54,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 188684810149954897, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: value
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 2375284334318290758, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: value
@@ -62,11 +62,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4881637330000481701, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: value
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5092289036890740050, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: value
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6576920784671018324, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: pinnable
@@ -118,7 +118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7992340773614330262, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: value
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8156470395350812674, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: m_Sprite
@@ -326,7 +326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8551145438024458666, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: value
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8555471367856122440, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: m_RootOrder
