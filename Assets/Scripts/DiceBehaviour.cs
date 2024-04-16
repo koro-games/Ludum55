@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -20,6 +21,7 @@ public class DiceBehaviour : MonoBehaviour
     public bool pinnable=true;
     public bool triggerlast=false;
     public DiceUI diceui;
+    bool pinned;
     Vector3 lastpos;
     Rigidbody rb;
     public Animation Nail;
@@ -54,7 +56,8 @@ public class DiceBehaviour : MonoBehaviour
     public void ResetCube()
     {
         OnRoll.Invoke();
-        if (!Nail.gameObject.activeSelf)
+        pinSystem.ChangeUI();
+        if (!pinned)
         {
             
             transform.position =
@@ -74,9 +77,9 @@ public class DiceBehaviour : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (rb.isKinematic)
+        if (rb.isKinematic&& pinnable)
         {
-            if (!Nail.gameObject.activeSelf)
+            if (!pinned)
                 PinDice();
             else
             {
@@ -87,8 +90,9 @@ public class DiceBehaviour : MonoBehaviour
 
     public void PinDice()
     {
-        if (pinnable&& pinSystem.pinscount>0)
+        if (pinSystem.pinscount>0)
         {
+            pinned = true;
             pinSystem.UsePin(true);
             Nail.transform.rotation = Quaternion.identity;
             Nail.gameObject.SetActive(true);
@@ -103,12 +107,13 @@ public class DiceBehaviour : MonoBehaviour
     IEnumerator UnPinDice()
     {
         pinSystem.UsePin(false);
+        pinned=false;
         Nail.Stop();
         Nail.Play("UnNail");
         Nail.transform.rotation = Quaternion.identity;
         nailaudio.Play(1);
         yield return new WaitForSeconds(1);
-        Nail.gameObject.SetActive(false);
+        if (!pinned) Nail.gameObject.SetActive(false);
     }
     public void GetHighest()
     {

@@ -10,43 +10,31 @@ public class PinSystem : MonoBehaviour
     public Image[] images;
     void Start()
     {
-        for (int p = 0; p < images.Length; p++)
-        {
-            if (p < pinsavailable) images[p].gameObject.SetActive(true);
-            else images[p].gameObject.SetActive(false);
-        }
-
+        ChangeUI();
     }
     public void UsePin(bool inuse)
     {
         if (inuse) pinscount--;
         else pinscount++;
         Mathf.Clamp(pinscount,0, pinsavailable);
-        for (int p = 0; p < pinsavailable; p++)
+        ChangeUI();
+    }
+    public void ChangeUI()
+    {
+        Color col = images[0].color;
+        col.a = 1;
+        Color acol = col;
+        acol.a = 0.5f;
+        for (int p = 0; p < images.Length; p++)
         {
-            Color col = images[p].color;
-            if (p < pinscount) 
-            { 
-                col.a = 1;
-                images[p].color = col;
-            }
-            else
-            {
-                col.a = 0.5f;
-                images[p].color = col;
-            }
+
+            images[p].gameObject.SetActive(p < pinsavailable);
+            images[p].color = p < pinscount ? col : acol;
         }
     }
-    // Update is called once per frame
     public void ChangePinCount(int i)
     {
         pinsavailable = Mathf.Clamp(pinsavailable+i,0, images.Length);
-
-            for (int p=0;p< images.Length; p++)
-            {
-                if (p<pinsavailable) images[p].gameObject.SetActive(true);
-                else images[p].gameObject.SetActive(false);
-            }
-        
+        ChangeUI();
     }
 }

@@ -9257,7 +9257,7 @@ MonoBehaviour:
   crtRenderSettings: {fileID: 11400000, guid: 2d929546960894d169f1999a321e4ff4, type: 2}
   _runtimeMaterial: {fileID: 1575495138}
   data:
-    pixelationAmount: 3
+    pixelationAmount: 2
     maxColorChannels:
       red: 16
       green: 16
