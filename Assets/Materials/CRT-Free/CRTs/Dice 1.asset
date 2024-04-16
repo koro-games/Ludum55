@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dice 1
   m_EditorClassIdentifier: 
   data:
-    pixelationAmount: 3
+    pixelationAmount: 2
     maxColorChannels:
       red: 16
       green: 16
@@ -42,4 +42,4 @@ MonoBehaviour:
       sizeMultiplier: 0.51
     innerMonitorShineRadius: -0.087
     innerMonitorShineCurve: 10
-  validationId: 92d8f394-8509-48ba-b1fd-d7db1249af99
+  validationId: a8c10cfa-8e2e-4d46-8ba0-fbcc0c299c63
