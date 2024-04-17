@@ -23,6 +23,14 @@ PrefabInstance:
       propertyPath: value
       value: -6
       objectReference: {fileID: 0}
+    - target: {fileID: 7335659461567785759, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335659461567785759, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
+      propertyPath: sounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 49920189f2ba7ca40951c1d06e17aec4, type: 3}
     - target: {fileID: 7992340773614330262, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: value
       value: 6
@@ -181,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9075020764639834354, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
       propertyPath: m_Name
-      value: Simple Dice 1
+      value: DevilDice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a12959eb85663749909f43769fa43e7, type: 3}
