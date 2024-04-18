@@ -35,6 +35,7 @@ public class PinSystem : MonoBehaviour
     public void ChangePinCount(int i)
     {
         pinsavailable = Mathf.Clamp(pinsavailable+i,0, images.Length);
+        pinscount = Mathf.Clamp(pinscount + i,0, images.Length);
         ChangeUI();
     }
 }
